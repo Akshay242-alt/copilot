@@ -50,6 +50,13 @@ Refer to technology-specific instruction files:
 - Keep components focused on a single responsibility
 - Use props for configuration, not duplication
 - Document component APIs with TypeScript types
+- Every reusable `.astro` component must include a documented `Props` interface. Describe each prop's purpose, requiredness, and any accepted shape; update the documentation when the contract changes.
+
+### Comment Philosophy
+
+- Explain intent, accessibility rationale, or non-obvious design decisions.
+- Do not use comments to repeat element names, class names, or other behavior already expressed by the markup.
+- Remove or update comments that no longer match the component.
 
 ## Development Workflow
 
