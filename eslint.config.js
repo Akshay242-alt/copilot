@@ -39,5 +39,17 @@ export default [
     languageOptions: {
       parser: tseslint.parser,
     },
+    rules: {
+      quotes: ["error", "single", { avoidEscape: true }],
+      semi: ["error", "always"],
+    },
+  },
+
+  // Public data-layer APIs must declare their module-boundary types.
+  {
+    files: ["db/**/*.ts", "src/lib/*.ts"],
+    rules: {
+      "@typescript-eslint/explicit-module-boundary-types": "error",
+    },
   },
 ];
